@@ -33,7 +33,7 @@ app.get('/weather',(req,res) => {
         return res.send({ error: 'no address provided...!!'});
     }
     console.log(req.query.address);
-    
+    console.log(req.query.address);
     geocode(req.query.address,(error,data) =>{
         if (error){
             return res.send({ error: error}); //console.log(error);
@@ -47,9 +47,7 @@ app.get('/weather',(req,res) => {
           });
     });
     
-    /*res.send({
-        
-    });*/
+    
 });
 app.listen(3000,()=>{
     console.log("server is up and running on port 3000");
